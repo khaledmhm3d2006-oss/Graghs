@@ -24,14 +24,14 @@ int main() {
         adj[v].push_back(u);
     }
 
-    int connectedComponents = 0;
+    int connected_Components = 0;
     for (int u = 1; u <= n; u++) {
         if (!vis[u]) {
-            connectedComponents++;
+            connected_Components++;
             DFS(u);
         }
     }
-    cout << (connectedComponents == 1 && m == n - 1 ? "YES" : "NO");
+    cout << (connected_Components == 1 && m == n - 1 ? "Tree" : "NotTree");
     return 0;
 }
 
